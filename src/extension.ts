@@ -1,25 +1,39 @@
 // The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
+import { extractFunction } from "./utils/parseFunction";
 
 // This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+// extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  // This line of code will only be executed once when your extension is activated
+  console.log('"komento" is now active!');
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "komento" is now active!');
+  // The command has been defined in the package.json file
+  const disposable = vscode.commands.registerCommand(
+    "komento.generateJSDocComments",
+    () => {
+      const editor = vscode.window.activeTextEditor;
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('komento.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Komento!');
-	});
+      // if there's no editor open, skip as there's nothing to do
+      if (!editor) {
+        return;
+      }
 
-	context.subscriptions.push(disposable);
+			// get the function to use for generation
+			let functionToUse = extractFunction();
+			if(functionToUse) {
+				console.log("functionToUse: ", functionToUse?.name);
+				vscode.window.showInformationMessage(
+          `Generating JSDoc comments for: ${functionToUse?.name}`
+        );
+
+				// get response from ai
+				
+			}
+    }
+  );
+
+  context.subscriptions.push(disposable);
 }
 
 // This method is called when your extension is deactivated
