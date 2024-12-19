@@ -12,6 +12,7 @@
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}"
 			],
+			"envFile": "${workspaceFolder}/.env",
 			"outFiles": [
 				"${workspaceFolder}/dist/**/*.js"
 			],
