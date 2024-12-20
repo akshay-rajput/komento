@@ -17,7 +17,15 @@
         "command": "komento.generateJSDocComments",
         "title": "Generate JSDoc comment"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "komento.generateJSDocComments",
+          "when": "editorLangId == 'javascript' || editorLangId == 'typescript'"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
