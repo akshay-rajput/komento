@@ -2,7 +2,7 @@
   "name": "komento",
   "displayName": "Komento",
   "description": "A lightweight VSCode extension that adds meaningful JSDoc comments to your JS/TS files with just a click. Built for developers who value clarity and efficiency. 🎯",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "publisher": "Komento",
   "engines": {
@@ -41,17 +41,6 @@
           "group": "1_edit"
         }
       ]
-    },
-    "configuration": {
-      "type": "object",
-      "title": "Komento Settings",
-      "properties": {
-        "komento.eid": {
-          "type": "string",
-          "default": "komento_default",
-          "description": ""
-        }
-      }
     }
   },
   "scripts": {
