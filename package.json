@@ -35,8 +35,7 @@
       "editor/context": [
         {
           "command": "komento.generateJSDocComments",
-          "when": "editorLangId == 'javascript' || editorLangId == 'typescript'",
-          "group": "1_edit"
+          "when": "editorLangId == 'javascript' || editorLangId == 'typescript'"
         }
       ]
     }
