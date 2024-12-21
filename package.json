@@ -1,28 +1,38 @@
 {
   "name": "komento",
   "displayName": "Komento",
-  "description": "Komento is a contextual jsDoc generation extension for your javascript/typescript files.",
-  "version": "0.0.1",
+  "description": "A lightweight VSCode extension that adds meaningful JSDoc comments to your JS/TS files with just a click. Built for developers who value clarity and efficiency. 🎯",
+  "version": "1.0.0",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "AI"
   ],
+  "icon": "public/komento-simple.png",
+  "galleryBanner": {
+    "color": "#f5a623",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/akshay-rajput/komento",
+  "keywords": ["JSDoc", "developer tools", "code documentation", "auto-comment"],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "komento.generateJSDocComments",
-        "title": "Generate JSDoc comment"
+        "title": "Generate JSDoc comment ✨"
       }
     ],
     "menus": {
       "editor/context": [
         {
           "command": "komento.generateJSDocComments",
-          "when": "editorLangId == 'javascript' || editorLangId == 'typescript'"
+          "when": "editorLangId == 'javascript' || editorLangId == 'typescript'",
+          "group": "1_edit"
         }
       ]
     }
