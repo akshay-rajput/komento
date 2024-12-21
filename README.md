@@ -1,5 +1,7 @@
 # komento README
 
+コメント
+
 This is the README for your extension "komento". After writing up a brief description, we recommend including the following sections.
 
 ## Features
