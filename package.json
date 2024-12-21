@@ -49,7 +49,7 @@
         "komento.eid": {
           "type": "string",
           "default": "",
-          "description": "A unique identifier for the extension installation."
+          "description": ""
         }
       }
     }
