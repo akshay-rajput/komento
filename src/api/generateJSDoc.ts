@@ -2,13 +2,6 @@ export async function getGeneratedJSDoc(
   functionCode: string,
   eid: string
 ): Promise<string> {
-  // const API_URL = process.env.GENERATE_DOC_URL;
-  // const ANON_KEY = process.env.SUPABASE_ANON_KEY;
-
-  // if (!API_URL || !ANON_KEY) {
-  //   return Promise.reject(new Error("API URL & ANON_KEY are required."));
-  // }
-
   try {
     const response = await fetch(
       "https://fwhzpfrjozntigdlpytn.supabase.co/functions/v1/generateJSDocComments",
@@ -17,7 +10,6 @@ export async function getGeneratedJSDoc(
         headers: {
           "Content-Type": "application/json",
           "x-eid": `${eid}`,
-          // "Authorization": `Bearer ${ANON_KEY}`
         },
         body: JSON.stringify({ functionCode }),
       }
