@@ -1,6 +1,8 @@
 {
   "name": "komento",
+  "manifestVersion": 1,
   "displayName": "Komento",
+  "id":"komento",
   "description": "A lightweight VSCode extension that adds meaningful JSDoc comments to your JS/TS files with just a click. Built for developers who value clarity and efficiency. 🎯",
   "version": "1.0.5",
   "license": "MIT",
