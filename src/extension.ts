@@ -3,6 +3,7 @@ import * as vscode from "vscode";
 import { extractFunction } from "./utils/parseFunction";
 import { getGeneratedJSDoc } from "./api/generateJSDoc";
 import { insertJSDocBeforeFunction } from "./utils/updateEditorFile";
+import { getExtensionUUID } from "./utils/extensionuid";
 
 // This method is called when your extension is activated
 // extension is activated the very first time the command is executed
@@ -11,7 +12,9 @@ export function activate(context: vscode.ExtensionContext) {
   const disposable = vscode.commands.registerCommand(
     "komento.generateJSDocComments",
     async () => {
-      const editor = vscode.window.activeTextEditor;
+      const editor = vscode.window.activeTextEditor;      
+      const eid = await getExtensionUUID();
+
       // if there's no editor open, skip as there's nothing to do
       if (!editor) {
         vscode.window.showInformationMessage(
@@ -49,7 +52,8 @@ export function activate(context: vscode.ExtensionContext) {
               // console.log("functionToUse: ", functionToUse);
 
               const generatedJSDoc = await getGeneratedJSDoc(
-                functionToUse.fullString
+                functionToUse.fullString,
+                eid || ''
               );
 
               if (generatedJSDoc) {
