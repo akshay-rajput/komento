@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.96.0"
+    "vscode": "^1.90.0"
   },
   "categories": [
     "Other",
@@ -17,7 +17,12 @@
     "theme": "dark"
   },
   "homepage": "https://github.com/akshay-rajput/komento",
-  "keywords": ["JSDoc", "developer tools", "code documentation", "auto-comment"],
+  "keywords": [
+    "JSDoc",
+    "developer tools",
+    "code documentation",
+    "auto-comment"
+  ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
@@ -35,6 +40,17 @@
           "group": "1_edit"
         }
       ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Komento Settings",
+      "properties": {
+        "komento.eid": {
+          "type": "string",
+          "default": "",
+          "description": "A unique identifier for the extension installation."
+        }
+      }
     }
   },
   "scripts": {
@@ -51,7 +67,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
-    "@types/vscode": "^1.96.0",
+    "@types/vscode": "^1.90.0",
     "@typescript-eslint/eslint-plugin": "^8.17.0",
     "@typescript-eslint/parser": "^8.17.0",
     "@vscode/test-cli": "^0.0.10",
@@ -63,7 +79,9 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "dotenv": "^16.4.7"
+    "docker-names": "^1.2.1",
+    "dotenv": "^16.4.7",
+    "uuid": "^11.0.3"
   },
   "repository": {
     "type": "git",
