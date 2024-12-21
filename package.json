@@ -2,9 +2,9 @@
   "name": "komento",
   "manifestVersion": 1,
   "displayName": "Komento",
-  "id":"komento",
+  "id": "komento",
   "description": "A lightweight VSCode extension that adds meaningful JSDoc comments to your JS/TS files with just a click. Built for developers who value clarity and efficiency. 🎯",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "publisher": "Komento",
   "engines": {
@@ -24,7 +24,10 @@
     "developer tools",
     "code documentation"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -36,8 +39,7 @@
     "menus": {
       "editor/context": [
         {
-          "command": "komento.generateJSDocComments",
-          "when": "editorLangId == 'javascript' || editorLangId == 'typescript'"
+          "command": "komento.generateJSDocComments"
         }
       ]
     }
@@ -74,6 +76,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/akshay-rajput/komento.git"
+    "url": "https://github.com/akshay-rajput/komento"
   }
 }
