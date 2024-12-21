@@ -1,9 +1,6 @@
-# コメント (Komento) ✨
+# Komento (コメント) ✨
 
 **Komento** is a Visual Studio Code extension that helps you generate **contextual & meaningful** JSDoc comments for your functions with just a click! Simplify documentation and keep your codebase well-documented with ease.
-
-<!-- --- -->
-<!-- ![Placeholder for Demo GIF](./path-to-demo-gif.gif) -->
 
 ---
 
