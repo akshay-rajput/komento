@@ -2,15 +2,14 @@
   "name": "komento",
   "displayName": "Komento",
   "description": "A lightweight VSCode extension that adds meaningful JSDoc comments to your JS/TS files with just a click. Built for developers who value clarity and efficiency. 🎯",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "publisher": "Komento",
   "engines": {
     "vscode": "^1.90.0"
   },
   "categories": [
-    "Other",
-    "AI"
+    "Other"
   ],
   "icon": "public/komento-simple.png",
   "galleryBanner": {
@@ -21,8 +20,7 @@
   "keywords": [
     "JSDoc",
     "developer tools",
-    "code documentation",
-    "auto-comment"
+    "code documentation"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
