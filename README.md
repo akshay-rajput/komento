@@ -4,6 +4,12 @@
 
 ---
 
+## Video Preview
+
+[![Video demo of komento](https://img.youtube.com/vi/B_3XM0jwPLY/0.jpg)](https://www.youtube.com/watch?v=B_3XM0jwPLY)
+
+---
+
 ## Features 🚀
 
 - **Context Menu Command**: The Generate command is available in context menu when you Right-click on a function declaration or inside the function.
